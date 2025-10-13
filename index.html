@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
-  <link rel="icon" href="/img/bookmark.svg" type="image/svg+xml">
+  <link rel="icon" href="./img/bookmark.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
@@ -16,8 +16,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css" />  -->
   <!-- <script src="https://unpkg.com/mdui@2/mdui.global.js"></script> -->
-
-  <script src="/mdui.global.js"></script>
+
+
+  <script src="./img/mdui.global.js"></script>
+
+
   <!-- <style>
   @import url('./css/main.css');
 </style> -->
@@ -27,8 +30,8 @@
        老一辈和新方法
        草 -->
   <title>神秘的小空间</title>
-  <script type="module" crossorigin src="/assets/index-Bi_YKo2l.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Dsb7YKQc.css">
+  <script type="module" crossorigin src="./assets/index-C7CThhkn.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-bFJKYIrL.css">
 </head>
 
 <body>
@@ -103,7 +106,7 @@
       <!-- <mdui-linear-progress></mdui-linear-progress> -->
     </mdui-card>
   </div>
-  <!-- <div style=" display: flex; align-items: flex-start; flex-wrap: wrap;">
+  <div style=" display: flex; align-items: flex-start; flex-wrap: wrap;">
     <mdui-avatar src="./img/hand2.jpg" style="vertical-align: top;margin-left: 10px;"></mdui-avatar>
     <span style="margin-top: 10px;margin-left: 10px;">vinci_sanchez</span>
     <mdui-button-icon></mdui-button-icon>
@@ -112,10 +115,195 @@
     <div style="font-size:5px;margin-top: 30px;color: #d0bcff; opacity: 0.3;">
       你看不见我
     </div>
-  </div> -->
+  </div>
+  <div style="
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+      ">
+    <mdui-card id="platform_card" class="parent_box" style="width: 30%; height: 300px">
+      <mdui-list>
+        <mdui-list-item icon="near_me" style="color:#d0bcff">其他平台</mdui-list-item>
+      </mdui-list>
+      <div style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+        <div>
+          <mdui-tooltip content="github">
+            <mdui-card class="middle" variant="filled" clickable
+              style="margin-left: 10px;margin-top: 10px; width: 50px;height: 50px;">
+              <a href="https://github.com/vinci-sanchez" target="_blank">
+                <image src="./img/github-mark-white.svg" alt="github"></image>
+              </a>
+            </mdui-card>
+          </mdui-tooltip>
+        </div>
+        <div>
+          <mdui-tooltip content="bilibili">
+            <mdui-card class="middle" variant="filled" clickable
+              style="margin-left: 10px;margin-top: 10px; width: 50px;height: 50px;">
+              <a href="https://space.bilibili.com/1429687130" target="_blank">
+                <img src="./img/bilibili-line.svg" alt="Bilibili"></img>
+              </a>
+            </mdui-card>
+          </mdui-tooltip>
+        </div>
+        <div>
+          <mdui-tooltip content="Telegram">
+            <mdui-card class="middle" variant="filled" clickable
+              style="margin-left: 10px; margin-top: 10px; width: 50px;height: 50px;">
+              <a href="https://t.me/vinci_sanchez" target="_blank">
+                <img src="./img/Telegram.svg" alt="Telegram"></img>
+              </a>
+            </mdui-card>
+          </mdui-tooltip>
+        </div>
+        <div>
+          <mdui-tooltip content="twitter">
+            <mdui-card class="middle" variant="filled" clickable
+              style="margin-left: 10px; margin-top: 10px; width: 50px;height: 50px;">
+              <a href="https://t.me/vinci_sanchez" target="_blank">
+                <img src="./img/X.svg" alt="X"></img>
+              </a>
+            </mdui-card>
+          </mdui-tooltip>
+        </div>
+      </div>
+      <mdui-tooltip content="留言">
+        <mdui-card id="postmessage" class="child-box middle" variant="filled" clickable
+          style="bottom: 10px; right: 70px; width: 50px;height: 50px;">
 
-  <div id="app"></div>
-  <div><span id="location" style="font-size: 15px;">加载中...</span></div>
+          <img src="./img/write1.svg" alt="Telegram" style="width: 35px; height: auto;"></img>
+
+        </mdui-card>
+        <mdui-dialog id="postmessage_dialog" close-on-overlay-click>
+          <div class="parent_box" style="width: 330px;">
+            <mdui-text-field id="TextField" autosize variant="outlined" label="写点什么吧QAQ"
+              style="width: 250px;"></mdui-text-field>
+            <mdui-button id="post_to_message" class="child-box"
+              style="margin-top: 10px;margin-left: 10px;">send</mdui-button>
+          </div>
+        </mdui-dialog>
+      </mdui-tooltip>
+
+      <mdui-tooltip content="mail">
+        <mdui-card id="mail" class="child-box middle" variant="filled" clickable
+          style=" bottom: 10px;right: 10px;width: 50px;height: 50px;">
+          <img src="./img/email.svg" alt="email"></img>
+        </mdui-card>
+        <mdui-dialog close-on-overlay-click class="mail_dialog">
+          <div class="parent_box" style="width: 330px;">
+            <mdui-text-field readonly label="mail" value="vincisanchez@foxmail.com"
+              style="width: 250px;"></mdui-text-field>
+            <mdui-button id="copy" class="child-box" style="margin-left: 10px; top: 30px;">复制</mdui-button>
+          </div>
+        </mdui-dialog>
+      </mdui-tooltip>
+    </mdui-card>
+    <div id="platform_card" style="width: 70%">
+      <mdui-list>
+        <mdui-collapse accordion>
+          <mdui-collapse-item id="doing">
+            <mdui-list-item description="加载中" slot="header" icon="near_me">我在干啥？</mdui-list-item>
+            <div>
+              <mdui-list-item disabled id="loading_status">
+                <div class="parent_box" style="width: 100%; display: flex; align-items: center;">
+                  <mdui-button-icon loading disabled icon="search" variant="tonal"></mdui-button-icon>
+                  <div style="margin-left: 10px;">加载中</div>
+                </div>
+              </mdui-list-item>
+              <table class="table-data">
+                <tr>
+                  <td id="time" style="width: 20%;">时间</td>
+                  <td id="active">状态</td>
+                  <td id="Memory" style="width: 25%;">内存</td>
+                </tr>
+                <tr>
+                  <td id="time_0">Item 1</td>
+                  <td id="active_0">Item 2</td>
+                  <td id="Memory_0">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_1">Item 1</td>
+                  <td id="active_1">Item 2</td>
+                  <td id="Memory_1">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_2">Item 1</td>
+                  <td id="active_2">Item 2</td>
+                  <td id="Memory_2">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_3">Item 1</td>
+                  <td id="active_3">Item 2</td>
+                  <td id="Memory_3">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_4">Item 1</td>
+                  <td id="active_4">Item 2</td>
+                  <td id="Memory_4">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_5">Item 1</td>
+                  <td id="active_5">Item 2</td>
+                  <td id="Memory_5">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_6">Item 1</td>
+                  <td id="active_6">Item 2</td>
+                  <td id="Memory_6">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_7">Item 1</td>
+                  <td id="active_7">Item 2</td>
+                  <td id="Memory_7">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_8">Item 1</td>
+                  <td id="active_8">Item 2</td>
+                  <td id="Memory_8">Item 2</td>
+                </tr>
+                <tr>
+                  <td id="time_9">Item 1</td>
+                  <td id="active_9">Item 2</td>
+                  <td id="Memory_9">Item 2</td>
+                </tr>
+                <!-- <mdui-list-item>Item 2 - subitem</mdui-list-item> -->
+              </table>
+            </div>
+          </mdui-collapse-item>
+          <!-- <mdui-collapse-item value="item-2">
+            <mdui-list-item slot="header" icon="near_me">关于我</mdui-list-item>
+            <div style="padding: 16px;">
+              <p>一个热爱编程和技术的普通人</p>
+              <p>喜欢折腾各种新技术和工具</p>
+              <p>欢迎交流和分享</p>
+            </div>
+          </mdui-collapse-item> -->
+          <mdui-collapse-item id="Leave a message">
+            <mdui-list-item description="加载中" slot="header" icon="near_me">留言</mdui-list-item>
+            <div>
+              <mdui-list-item disabled id="loading_status">
+                <div class="parent_box" style="width: 100%; display: flex; align-items: center;">
+                  <mdui-button-icon loading disabled icon="search" variant="tonal"></mdui-button-icon>
+                  <div style="margin-left: 10px;">加载中</div>
+                </div>
+              </mdui-list-item>
+              <table id="message_table" class="table-data">
+                <tr>
+                  <td id="时间" style="width: 33.3%;">时间</td>
+                  <td id="信息" style="width: 66.7%;">信息</td>
+                </tr>
+
+              </table>
+
+            </div>
+          </mdui-collapse-item>
+        </mdui-collapse>
+      </mdui-list>
+    </div>
+  </div>
+  <mdui-linear-progress value="0.5"></mdui-linear-progress>
+
 </body>
 
 </html>
